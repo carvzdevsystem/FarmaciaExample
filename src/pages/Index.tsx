@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Search, Truck, Shield, Clock, Heart, Star, ArrowRight } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
 import heroImage from "@/assets/hero-pharmacy.jpg";
 import consultationImage from "@/assets/consultation.jpg";
 import deliveryImage from "@/assets/delivery.jpg";
@@ -10,6 +11,7 @@ import productsImage1 from "@/assets/products-1.jpg";
 import productsImage2 from "@/assets/products-2.jpg";
 
 const Index = () => {
+  const { addItem } = useCart();
   const features = [
     {
       icon: Truck,
@@ -191,7 +193,19 @@ const Index = () => {
                     <span className="text-2xl font-bold text-primary">
                       R$ {product.price.toFixed(2)}
                     </span>
-                    <Button size="sm">Adicionar</Button>
+                    <Button
+                      size="sm"
+                      onClick={() =>
+                        addItem({
+                          id: product.id,
+                          name: product.name,
+                          price: product.price,
+                          image: product.image,
+                        })
+                      }
+                    >
+                      Adicionar
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

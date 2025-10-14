@@ -3,11 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart, Menu, X, Heart, Pill } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useCart } from "@/contexts/CartContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const cartItemsCount = 0; // Será conectado ao estado do carrinho
+  const { totalItems } = useCart();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -60,9 +61,9 @@ const Header = () => {
             <Link to="/carrinho">
               <Button variant="ghost" size="icon" className="relative">
                 <ShoppingCart className="h-5 w-5" />
-                {cartItemsCount > 0 && (
+                {totalItems > 0 && (
                   <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center bg-secondary text-secondary-foreground">
-                    {cartItemsCount}
+                    {totalItems}
                   </Badge>
                 )}
               </Button>

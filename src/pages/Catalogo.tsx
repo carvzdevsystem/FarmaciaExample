@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { toast } from "sonner";
+import { useCart } from "@/contexts/CartContext";
 import productsImage1 from "@/assets/products-1.jpg";
 import productsImage2 from "@/assets/products-2.jpg";
 
@@ -80,6 +80,7 @@ const categories = ["Todos", "Analgésicos", "Anti-inflamatórios", "Vitaminas",
 const Catalogo = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const { addItem } = useCart();
 
   const filteredProducts = mockProducts.filter((product) => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -88,7 +89,13 @@ const Catalogo = () => {
   });
 
   const handleAddToCart = (product: Product) => {
-    toast.success(`${product.name} adicionado ao carrinho!`);
+    addItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      category: product.category,
+    });
   };
 
   return (
