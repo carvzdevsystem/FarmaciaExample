@@ -1,13 +1,13 @@
-# 💊 Farmácia São Camillo
+# 💊 Farmácia dev
 
-Um site completo, moderno e funcional para a **Farmácia São Camillo**, desenvolvido com foco em **performance, design responsivo e experiência do usuário**.  
+Um site completo, moderno e funcional para a **Farmácia dev**, desenvolvido com foco em **performance, design responsivo e experiência do usuário**.  
 O projeto integra **frontend, backend e banco de dados**, oferecendo catálogo de medicamentos, carrinho de compras e sistema de entrega diretamente para a casa do cliente.
 
 ---
 
 ## 🚀 Visão Geral
 
-A **Farmácia São Camillo** foi criada para unir **tecnologia e praticidade** no setor farmacêutico.  
+A **Farmácia dev* foi criada para unir **tecnologia e praticidade** no setor farmacêutico.  
 Com uma interface intuitiva e recursos avançados, o usuário pode:
 - Navegar pelo catálogo de medicamentos;
 - Adicionar produtos ao carrinho;
