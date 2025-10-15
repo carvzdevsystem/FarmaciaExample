@@ -1,36 +1,48 @@
-# Welcome to your Lovable project
+# 💊 Farmácia São Camillo
 
-## Project info
+Um site completo, moderno e funcional para a **Farmácia São Camillo**, desenvolvido com foco em **performance, design responsivo e experiência do usuário**.  
+O projeto integra **frontend, backend e banco de dados**, oferecendo catálogo de medicamentos, carrinho de compras e sistema de entrega diretamente para a casa do cliente.
 
-**URL**: https://lovable.dev/projects/f0225881-ca34-428c-890a-35739461644d
+---
 
-## How can I edit this code?
+## 🚀 Visão Geral
 
-There are several ways of editing your application.
+A **Farmácia São Camillo** foi criada para unir **tecnologia e praticidade** no setor farmacêutico.  
+Com uma interface intuitiva e recursos avançados, o usuário pode:
+- Navegar pelo catálogo de medicamentos;
+- Adicionar produtos ao carrinho;
+- Finalizar o pedido informando o endereço de entrega;
+- Acompanhar o status do pedido em tempo real.
 
-**Use Lovable**
+Além disso, a farmácia conta com um **painel administrativo** para gerenciar produtos, usuários e pedidos.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f0225881-ca34-428c-890a-35739461644d) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧩 Tecnologias Utilizadas
 
-**Use your preferred IDE**
+### 🌐 Frontend
+- **React.js + TypeScript**
+- **Tailwind CSS** → design moderno e responsivo
+- **Framer Motion** → animações leves e suaves
+- **Axios** → consumo da API
+- **Vite** → ambiente de desenvolvimento rápido
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### ⚙️ Backend
+- **Node.js + Express + TypeScript**
+- **JWT (JSON Web Token)** → autenticação de usuários
+- **Multer** → upload de imagens
+- **Nodemailer** → envio de emails de confirmação
+- **Swagger** → documentação da API
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🗄️ Banco de Dados
+- **MongoDB + Mongoose**
+  - Coleções: `users`, `products`, `orders`
+  - Relacionamentos e índices otimizados para performance
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📁 Estrutura do Projeto
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
